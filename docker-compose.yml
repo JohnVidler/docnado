@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+        logger:
+                build: .
+                volumes:
+                        - type: bind
+                          source: /opt/docnado-docs
+                          target: /docnado/docs
+                          read_only: false
+
+                          volumes:
+                                  network-logs:
+
